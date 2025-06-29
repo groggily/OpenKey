@@ -17,7 +17,7 @@ redistribute your new version, it MUST be open source.
 #include <Urlmon.h>
 #include <fstream>
 #include <sstream>
-#include <std::string>
+#include <string>
 #pragma comment(lib, "Urlmon.lib")
 
 INT_PTR CALLBACK MainDialogProcess(HWND, UINT, WPARAM, LPARAM);

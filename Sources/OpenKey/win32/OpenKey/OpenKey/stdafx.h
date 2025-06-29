@@ -31,7 +31,7 @@ redistribute your new version, it MUST be open source.
 #include <malloc.h>
 #include <memory.h>
 #include <tchar.h>
-#include <std::string>
+#include <string>
 #include <vector>
 
 #include <shellapi.h>

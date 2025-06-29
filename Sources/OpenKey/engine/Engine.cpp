@@ -8,7 +8,7 @@
 #include <iostream>
 #include <algorithm>
 #include "Engine.h"
-#include <std::string.h>
+#include <string.h>
 #include <list>
 #include "Macro.h"
 
