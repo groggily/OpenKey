@@ -83,7 +83,7 @@ vKeyHookState HookState;
 static Uint32 TypingWord[MAX_BUFF];
 static Byte _index = 0;
 static std::vector<Uint32> _longWordHelper; //save the word when _index >= MAX_BUFF
-static list<std::vector<Uint32>> _typingStates; //Aug 28th, 2019: typing helper, save long state of Typing word, can go back and modify the word
+static std::list<std::vector<Uint32>> _typingStates; //Aug 28th, 2019: typing helper, save long state of Typing word, can go back and modify the word
 std::vector<Uint32> _typingStatesData;
 
 /**
