@@ -244,7 +244,7 @@ void onTableCodeChange() {
 }
 
 void saveToFile(const std::string& path) {
-    ofstream myfile;
+    std::ofstream myfile;
     myfile.open(path.c_str());
     myfile << ";Compatible OpenKey Macro Data file for UniKey*** version=1 ***\n";
     for (std::map<std::vector<Uint32>, MacroData>::iterator it = macroMap.begin(); it != macroMap.end(); ++it) {
@@ -254,7 +254,7 @@ void saveToFile(const std::string& path) {
 }
 
 void readFromFile(const std::string& path, const bool& append) {
-    ifstream myfile(path.c_str());
+    std::ifstream myfile(path.c_str());
     std::string line;
     int k = 0;
     size_t pos = 0;
