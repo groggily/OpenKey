@@ -31,7 +31,7 @@ redistribute your new version, it MUST be open source.
 #include <malloc.h>
 #include <memory.h>
 #include <tchar.h>
-#include <string>
+#include <std::string>
 #include <vector>
 
 #include <shellapi.h>
@@ -45,8 +45,6 @@ redistribute your new version, it MUST be open source.
 #include "OpenKeyManager.h"
 #include "OpenKeyHelper.h"
 #include "SystemTrayHelper.h"
-
-using namespace std;
 
 extern wchar_t _logBuffer[1024];
 #define LOG(...)  wsprintfW(_logBuffer, __VA_ARGS__); \

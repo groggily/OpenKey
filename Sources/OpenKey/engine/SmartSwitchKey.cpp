@@ -42,7 +42,7 @@ void getSmartSwitchKeySaveData(std::vector<Byte>& outData) {
     outData.push_back((Byte)count);
     outData.push_back((Byte)(count>>8));
     
-    for (std::std::map<std::string, Int8>::iterator it = _smartSwitchKeyData.begin(); it != _smartSwitchKeyData.end(); ++it) {
+    for (std::map<std::string, Int8>::iterator it = _smartSwitchKeyData.begin(); it != _smartSwitchKeyData.end(); ++it) {
         outData.push_back((Byte)it->first.length());
         for (int j = 0; j < it->first.length(); j++) {
             outData.push_back(it->first[j]);

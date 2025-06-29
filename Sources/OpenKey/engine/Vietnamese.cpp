@@ -558,7 +558,7 @@ std::map<Uint32, Uint32> _keyCodeToChar;
 
 void initKeyCodeToChar() {
     _keyCodeToChar.clear();
-    for (std::std::map<Uint32, Uint32>::iterator it = _characterMap.begin(); it != _characterMap.end(); ++it) {
+    for (std::map<Uint32, Uint32>::iterator it = _characterMap.begin(); it != _characterMap.end(); ++it) {
         _keyCodeToChar[it->second] = it->first;
     }
 }

@@ -112,7 +112,7 @@ void getMacroSaveData(std::vector<Byte>& outData) {
     outData.push_back((Byte)totalMacro);
     outData.push_back((Byte)(totalMacro>>8));
     
-    for (std::std::map<std::vector<Uint32>, MacroData>::iterator it = macroMap.begin(); it != macroMap.end(); ++it) {
+    for (std::map<std::vector<Uint32>, MacroData>::iterator it = macroMap.begin(); it != macroMap.end(); ++it) {
         outData.push_back((Byte)it->second.macroText.size());
         for (int j = 0; j < it->second.macroText.size(); j++) {
             outData.push_back(it->second.macroText[j]);
@@ -204,7 +204,7 @@ void getAllMacro(std::vector<std::vector<Uint32>>& keys, std::vector<std::string
     keys.clear();
     macroTexts.clear();
     macroContents.clear();
-    for (std::std::map<std::vector<Uint32>, MacroData>::iterator it = macroMap.begin(); it != macroMap.end(); ++it) {
+    for (std::map<std::vector<Uint32>, MacroData>::iterator it = macroMap.begin(); it != macroMap.end(); ++it) {
         keys.push_back(it->first);
         macroTexts.push_back(it->second.macroText);
         macroContents.push_back(it->second.macroContent);
@@ -238,7 +238,7 @@ bool deleteMacro(const std::string& macroText) {
 }
 
 void onTableCodeChange() {
-    for (std::std::map<std::vector<Uint32>, MacroData>::iterator it = macroMap.begin(); it != macroMap.end(); ++it) {
+    for (std::map<std::vector<Uint32>, MacroData>::iterator it = macroMap.begin(); it != macroMap.end(); ++it) {
         convert(it->second.macroContent, it->second.macroContentCode);
     }
 }
@@ -247,7 +247,7 @@ void saveToFile(const std::string& path) {
     ofstream myfile;
     myfile.open(path.c_str());
     myfile << ";Compatible OpenKey Macro Data file for UniKey*** version=1 ***\n";
-    for (std::std::map<std::vector<Uint32>, MacroData>::iterator it = macroMap.begin(); it != macroMap.end(); ++it) {
+    for (std::map<std::vector<Uint32>, MacroData>::iterator it = macroMap.begin(); it != macroMap.end(); ++it) {
         myfile <<it->second.macroText << ":" << it->second.macroContent<<"\n";
     }
     myfile.close();
